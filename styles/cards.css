@@ -25,35 +25,45 @@ main {
     transition: transform 500ms cubic-bezier(0,.88,.39,1);
 }
 
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    box-shadow: inset 0px 0px 12px rgb(31, 31, 31);
+}
+
 .big{
     height : 400px;
 }
 
 .small{
-    height: 100px;
+    height: 150px;
 }
 
-.big:nth-child(1){
+.card:nth-child(2){
     background-color: rgb(4, 1, 17);
     transform: translate(-10px, 2px) rotate(-1deg);
 }
 
-.big:nth-child(2){
+.card:nth-child(4){
     transform: translate(6px, -4px) rotate(1deg);
 }
 
-.big:nth-child(3){
+.card:nth-child(6){
     transform: translate(0px, 6px) rotate(-3deg);
 }
 
-.big:nth-child(4){
+.card:nth-child(8){
     transform: translate(18px, 6px) rotate(6deg);
 }
 
 /* CARDS HOVER */
 
 .card:hover {
-    border: 3px solid #D90076;
+    border: 2px solid var(--like);
+    box-shadow: 0 0 10px var(--like);
     cursor: pointer;
 }
 
@@ -61,20 +71,36 @@ main {
     transition: transform 1500ms cubic-bezier(0,.88,.39,1);
 }
 
-#cards:hover .big:nth-child(1){
+#cards:hover .card:nth-child(2){
     transform: translate(-330px, 80px) rotate(-21deg);
 }
 
-#cards:hover .big:nth-child(2){
+#cards:hover .card:nth-child(4){
     transform: translate(-110px, 10px) rotate(-8deg);
 }
 
-#cards:hover .big:nth-child(3){
+#cards:hover .card:nth-child(6){
     transform: translate(110px, 10px) rotate(8deg);
 }
 
-#cards:hover .big:nth-child(4){
+#cards:hover .card:nth-child(8){
     transform: translate(330px, 80px) rotate(21deg);
+}
+
+#cards:hover .card:nth-child(1){
+    transform: translate(360px, 340px) rotate(12deg);
+}
+
+#cards:hover .card:nth-child(3){
+    transform: translate(300px, -180px) rotate(-14deg);
+}
+
+#cards:hover .card:nth-child(5){
+    transform: translate(-220px, -220px) rotate(16deg);
+}
+
+#cards:hover .card:nth-child(7){
+    transform: translate(-280px, 320px) rotate(-8deg);
 }
 
 /* ACTIONS */
@@ -106,8 +132,8 @@ main {
 }
 
 #actions button i{
-    font-size: 50px;
     position: absolute;
+    font-size: 50px;
     transform: translate(-50%, -50%);
 }
 
@@ -117,19 +143,25 @@ main {
 
 #actions button#like {
     margin-left: var(--button-interior-margin);
-    color : #D90076;
+    color : var(--like);
     border-color: #D90076;
 }
 
 #actions button#reject:hover {
-    color : #e91818;
-    border-color: #e91818;
+    color : var(--dislike);
+    border-color: var(--dislike);
 }
 
 #actions button#like:hover {
-    color : #A90076;
-    border-color: #A90076;
+    color : var(--like-light);
+    border-color: var(--like-light);
+    box-shadow: 0 0 20px var(--like), inset 0 0 20px var(--like);
 }
+
+#actions button#like:hover i {
+    text-shadow: 0 0 15px var(--like);
+}
+
 
 #actions button::before{
     content: "";
@@ -137,15 +169,17 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: #333;
-    transition: all 0s ease-in-out
+    background-color: transparent;
+    transition: width 80ms ease-out, height 80ms ease-out, background-color 400ms ease-in-out;
+    box-shadow: inset 0 0 10px var(--background);
 }
 
 #actions button:active::before{
-    width: 100%;
-    height: 100%;
-    transition: all 200ms ease-in-out ;
+    width: 0;
+    height: 0;
+    transition: 0s ;
+    background-color: #333;
 }

@@ -2,6 +2,9 @@ body {
     --background : #1b1b1b;
     --surface : #313131;
     --text : #c0c0c0;
+    --like : #D90076;
+    --like-light : #f53ebe;
+    --dislike : #e91818;
     margin : 0;
     padding : 0;
     width : 100vw;
