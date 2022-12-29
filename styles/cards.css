@@ -43,7 +43,6 @@ main {
 }
 
 .card:nth-child(2){
-    background-color: rgb(4, 1, 17);
     transform: translate(-10px, 2px) rotate(-1deg);
 }
 
@@ -102,6 +101,31 @@ main {
 #cards:hover .card:nth-child(7){
     transform: translate(-280px, 320px) rotate(-8deg);
 }
+
+.holo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0) 100%);
+
+    display: flex;
+    align-items: flex-end;
+
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+.holo p{
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card:hover .holo{
+    opacity: 1;
+}
+
+
 
 /* ACTIONS */
 
