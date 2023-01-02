@@ -22,7 +22,7 @@ main {
 
     overflow: hidden;
 
-    transition: transform 500ms cubic-bezier(0,.88,.39,1);
+    transition: transform 300ms ease-out;
 }
 
 .card::after {
