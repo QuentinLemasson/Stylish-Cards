@@ -8,6 +8,7 @@ main {
 }
 
 #cards{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +27,8 @@ main {
                 scale 300ms ease-out;
     scale: 1;
     margin-bottom: 0;
+
+    translate: -50% -50%;
 }
 
 .card::after {
@@ -67,7 +70,8 @@ main {
 #cards:hover .card.big:hover {
     cursor: pointer;
     scale: 1;
-    translate: 0 -30px;
+    translate: -50% calc(-50% - 30px);
+    z-index: 10;
 }
 
 #cards:hover .card{
@@ -128,7 +132,7 @@ main {
 }
 
 .holo p{
-    margin-left: 10px;
+    margin: 10px;
     font-size: 20px;
     text-overflow: hidden;
     user-select: none;
@@ -220,4 +224,45 @@ main {
     height: 0;
     transition: 0s ;
     background-color: #333;
+}
+
+/** DECK SWIPE */
+
+.deck{
+    position: absolute;
+    transition: transform 500ms ease;
+}
+
+.deck[data-status="hidden"]{
+    transform: scale(0);
+}
+
+.deck[data-status="active"] {
+    transition-delay: 200ms;
+}
+
+.deck[data-status="active"] .card{
+    z-index: 2;
+}
+
+.deck:not([data-status="active"]) .card{
+    z-index: 1;
+}
+
+.deck[data-status="to-right"] {
+    transform: translate(100px,0) scale(0) translate(600px,0);
+}
+
+.deck[data-status="from-left"] {
+    transition: transform 0s;
+    transform: translate(-100px,0) scale(0) translate(-600px,0);
+}
+
+.deck[data-status="to-left"] {
+    transform: translate(-100px,0) scale(0) translate(-600px,0);
+}
+
+.deck[data-status="from-right"] {
+    transition: transform 0s;
+    transform: translate(100px,0) scale(0) translate(600px,0);
 }

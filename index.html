@@ -11,43 +11,142 @@
     <body>
         <main>
             <section id="cards">
-                <div class="card small">
-                    <img src="./images/Deck_1/Cat_4.png">
-                </div>
-                <div class="card big">
-                    <div class="holo"><p>Seeking guidance from what dwells beyond.</p></div>
-                    <img src="./images/Deck_1/Alpaca_3.png">
-                </div>
-                <div class="card small">
-                    <img src="./images/Deck_1/Cat_3.png">
-                </div>
-                <div class="card big">
-                    <div class="holo"><p>Humbly begging for the favor of the great ones.</p></div>
-                    <img src="./images/Deck_1/Alpaca_4.png">
-                </div>
-                <div class="card small">
-                    <img src="./images/Deck_1/Cat_2.png">
-                </div>
-                <div class="card big">
-                    <div class="holo"><p>Offering up my fleece to the mountain's deities.</p></div>
-                    <img src="./images/Deck_1/Alpaca_2.png">
-                </div>
-                <div class="card small">
-                    <img src="./images/Deck_1/Cat_1.png">
-                </div>
-                <div class="card big">
-                    <div class="holo"><p>Imploring the primeval gods to protect my herd.</p></div>
-                    <img src="./images/Deck_1/Alpaca_1.png">
-                </div>
+
+                <div class="deck" id="cultists_animals" data-id=0  data-status="active">
+                    <div class="card small">
+                        <img src="./images/Deck_1/Cat_4.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Seeking guidance from what dwells beyond."</p></div>
+                        <img src="./images/Deck_1/Alpaca_3.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_1/Cat_3.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Humbly begging for the favor of the great ones."</p></div>
+                        <img src="./images/Deck_1/Alpaca_4.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_1/Cat_2.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Offering up my fleece to the mountain's deities."</p></div>
+                        <img src="./images/Deck_1/Alpaca_2.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_1/Cat_1.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Imploring the primeval gods to protect my herd."</p></div>
+                        <img src="./images/Deck_1/Alpaca_1.png">
+                    </div>
+                </div>  
+                
+                <div class="deck" id="milk" data-id=1 data-status="hidden">
+                    <div class="card small">
+                        <img src="./images/Deck_2/Pig_4.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Gimmy gimmy some milky !</p></div>
+                        <img src="./images/Deck_2/Milk_4.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_2/Pig_3.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Hellow milky cow lady.</p></div>
+                        <img src="./images/Deck_2/Milk_3.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_2/Pig_2.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Milk it to the moon baby !</p></div>
+                        <img src="./images/Deck_2/Milk_2.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_2/Pig_1.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Make milky way ?</p></div>
+                        <img src="./images/Deck_2/Milk_1.png">
+                    </div>
+                </div>  
+
+                <div class="deck" id="spells" data-id=2 data-status="hidden">
+                    <div class="card small">
+                        <img src="./images/Deck_3/Minor_4.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Arcana Rift Breaker - Evocation</p></div>
+                        <img src="./images/Deck_3/Major_4.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_3/Minor_3.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Shatter Metal - Transmutation</p></div>
+                        <img src="./images/Deck_3/Major_3.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_3/Minor_2.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Antic Fiery Seal - Abjuration</p></div>
+                        <img src="./images/Deck_3/Major_2.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_3/Minor_1.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>Earthcrusing Ward - Evocation</p></div>
+                        <img src="./images/Deck_3/Major_1.png">
+                    </div>
+                </div>  
+
+                <div class="deck" id="cyberpunk" data-id=3 data-status="hidden">
+                    <div class="card small">
+                        <img src="./images/Deck_4/DNA_4.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"This is why you don't bring back fallen warriors..."</p></div>
+                        <img src="./images/Deck_4/Cyber_4.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_4/DNA_3.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Poetically speaking, flying toward the sun to burn up...</p></div>
+                        <img src="./images/Deck_4/Cyber_3.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_4/DNA_2.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"Be alone with my thoughts? Near on unachievable these days..."</p></div>
+                        <img src="./images/Deck_4/Cyber_2.png">
+                    </div>
+                    <div class="card small">
+                        <img src="./images/Deck_4/DNA_1.png">
+                    </div>
+                    <div class="card big">
+                        <div class="holo"><p>"I have found that people lie, most often deceiving themselves..."</p></div>
+                        <img src="./images/Deck_4/Cyber_1.png">
+                    </div>
+                </div>  
+
             </section>
+
             <section id="actions">
-                <button id="reject">
+                <button id="reject" onclick="handleDislikeClick()">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <button id="like">
+                <button id="like" onclick="handleLikeClick()">
                     <i class="fa-solid fa-heart"></i>
                 </button>
             </section>
+
         </main>
         <script src="cards.js"></script>
     </body>
